@@ -31,6 +31,18 @@ window.onload = function () {
         amountSel.options[amountSel.options.length] = new Option(x);
     }
     amountSel.onchange = function () {
+        if (amountSel.value == 1) {
+            document.getElementById("product_det_title").innerText = "One Original Cinnamon Bun"
+        }
+        if (amountSel.value == 3) {
+            document.getElementById("product_det_title").innerText = "Three Original Cinnamon Buns"
+        }
+        if (amountSel.value == 6) {
+            document.getElementById("product_det_title").innerText = "Six Original Cinnamon Buns"
+        }
+        if (amountSel.value == 12) {
+            document.getElementById("product_det_title").innerText = "Twelve Original Cinnamon Buns"
+        }
         //creates glaze drop down for the 4 glazes
         for (var y in subjectObject[this.value]) {
             // prevents from creating duplicate glazes when user switches amount
@@ -42,27 +54,48 @@ window.onload = function () {
     glazeSel.onchange = function () {
         //display correct values
         var z = subjectObject[amountSel.value][this.value];
-        console.log("var z = ", z);
-        //        for (var i = 0; i < z.length; i++) {
-        //            glazeSel.options[glazeSel.options.length] = new Option(z[i]);
-        //        }
-        if (z == "Vanilla milk") {
-            console.log("vanilla milk true")
-            document.getElementById("prdct_details_img").src = "joseph-gonzalez-AQSga3jii8A-unsplash (1).jpg";
+        var productTitle = document.getElementById("product_det_title").innerHTML;
 
+        if (z == "Vanilla milk") {
+            document.getElementById("prdct_details_img").src = "joseph-gonzalez-AQSga3jii8A-unsplash (1).jpg";
+            if (productTitle.includes("with")) {
+                var spltstr = productTitle.split("with")
+
+                document.getElementById("product_det_title").innerText = spltstr[0] + " with Vanilla Milk";
+            } else {
+                document.getElementById("product_det_title").innerText += " with Vanilla Milk";
+            }
         }
         if (z == "Sugar milk") {
-            console.log("sugar milk true")
             document.getElementById("prdct_details_img").src = "rob-sarmiento-RbqgLewxyXo-unsplash.jpg";
+            if (productTitle.includes("with")) {
+                var spltstr = productTitle.split("with")
+
+                document.getElementById("product_det_title").innerText = spltstr[0] + " with Sugar Milk";
+            } else {
+                document.getElementById("product_det_title").innerText += " with Sugar Milk";
+            }
         }
         if (z == "Double chocolate") {
-            console.log("chocolate true")
             document.getElementById("prdct_details_img").src = "tijana-drndarski-YC06tYOZqGo-unsplash copy.jpg";
+            if (productTitle.includes("with")) {
+                var spltstr = productTitle.split("with")
+
+                document.getElementById("product_det_title").innerText = spltstr[0] + " with Double Chocolate";
+            } else {
+                document.getElementById("product_det_title").innerText += " with Double Chocolate";
+            }
         }
 
         if (z == "None") {
-            console.log("None")
             document.getElementById("prdct_details_img").src = "kjartan-einarsson-1V-sKpHHju4-unsplash.jpg";
+            if (productTitle.includes("with")) {
+                var spltstr = productTitle.split("with")
+
+                document.getElementById("product_det_title").innerText = spltstr[0] + " with No Glaze";
+            } else {
+                document.getElementById("product_det_title").innerText += " with No Glaze";
+            }
         }
 
     }
