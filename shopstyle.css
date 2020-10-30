@@ -1,0 +1,237 @@
+nav {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    text-align: right;
+}
+
+
+body {
+    margin: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+
+/********** HEADER **********/
+header {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin: 0px;
+}
+
+#headerbackground {
+    background-image: url(fallon-michael-H6OBZaVveCA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15%;
+}
+
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+.current-page {
+    border-bottom: solid white;
+
+}
+
+/********** SHOP PAGE **********/
+.grid-container {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 600px;
+    width: auto;
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+    padding: 20px;
+
+}
+
+.grid-item {
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+.grid-item p {
+    color: white;
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 10px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/********** PRODUCT DETAILS **********/
+h2 {
+    color: black;
+}
+
+.product-details {
+    width: 40%;
+    margin-left: 20px;
+    padding-top: 50px;
+    float: left;
+    max-width: 500px;
+    width: 50%;
+}
+
+.product-details p {
+    color: black;
+}
+
+
+.product-details-img {
+    float: right;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    width: 50%;
+
+}
+
+.product-details-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#prdct_details_img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.button {
+    border: none;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 16px 32px;
+    display: inline-block;
+    font-size: 16px;
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 40px;
+    left: 100px;
+    float: left;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+h3 {
+    color: black;
+    margin-bottom: 50px;
+}
+
+/*
+.selector1 {
+    position: fixed;
+    bottom: 307px;
+    left: 200px;
+}
+
+.selector2 {
+    position: fixed;
+    bottom: 232px;
+    left: 200px;
+}
+*/
+
+/********** CART TABLE **********/
+#basket_title {
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+table {
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 1px solid grey;
+}
+
+th {
+    color: black;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 20px;
+
+}
+
+td {
+    color: black;
+    padding-bottom: 0px;
+}
+
+.cart_glaze {
+    font-size: 11px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+#total_amount {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.table_item {
+    padding-left: 10px;
+}
+
+.table_quantity {
+    text-align: center;
+}
+
+.table_price {
+    text-align: right;
+    padding-right: 10px;
+}
+
+/********** PRODUCT DETAILS FORM **********/
+
+#amount {
+    color: black;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+#glaze {
+    color: black;
+    margin-left: 100px;
+}
+
+#form1 {
+    color: black;
+    position: absolute;
+    bottom: 150px;
+    margin-left: 20px;
+}
+
+/********** CART AND NUMBER **********/
+#cart {
+    margin-right: 5px;
+    color: white;
+}

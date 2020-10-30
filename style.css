@@ -1,0 +1,66 @@
+header {
+    position: absolute;
+    text-align: left;
+    left: 20px;
+    top: 10px;
+}
+
+nav {
+    position: fixed;
+    right: 10px;
+    top: 40px;
+    text-align: right;
+}
+
+#todo-lists {
+    margin: 0 auto;
+    width: 80%;
+}
+
+body {
+    background-image: url(fallon-michael-H6OBZaVveCA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.homepage body
+
+/********** HEADER **********/
+header {
+    text-align: left;
+    padding: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin: 0px;
+}
+
+/********** HOME PAGE **********/
+#frontpageflavor {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    margin: 0;
+    padding-left: 20px;
+}
+
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+.current-page {
+    border-bottom: solid white;
+
+}
+
+/********** CART AND NUMBER **********/
+#cart {
+    margin-right: 5px;
+}

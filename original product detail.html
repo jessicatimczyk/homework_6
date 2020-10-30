@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bun Bun Bake Shop</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="shopstyle.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+</head>
+
+<script src="index.js"></script>
+
+
+<body onload="test()">
+    <header id="headerbackground">
+        <h1>Bun Bun</h1>
+        <h1>Bake Shop</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a class="current-page" href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a id="cart" href="cart.html">Cart</a>
+            <a id="cartnum"></a>
+        </nav>
+
+    </header>
+
+    <div class="product-details">
+        <h2>The Original Cinnamon Bun</h2>
+        <p>Our original cinnamon bun recipe features decadent cinnamon swirls between layers of our delicious buttery dough. They are finished with a sweet, thin glaze on top and baked with love!!!</p>
+    </div>
+    <div class="product-details-img">
+        <img id="prdct_details_img" src="the%20original.jpg" alt="the original">
+    </div>
+
+
+    <script src="form.js"></script>
+
+
+    <form name="form1" id="form1" action="/action_page.php">
+        Amount: <select name="amount" id="amount">
+            <option value="" selected="selected">Select amount</option>
+
+        </select>
+        <br><br>
+        Glaze: <select name="glaze" id="glaze">
+            <option value="" selected="selected">Please select amount first</option>
+        </select>
+        <br><br>
+        <input class="button" type="button" onclick="add_to_cart()" value="Add To Cart">
+    </form>
+
+
+</body>
+
+</html>

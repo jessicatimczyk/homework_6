@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bun Bun Bake Shop</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="shopstyle.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+</head>
+
+<script src="index.js"></script>
+
+<body onload="test()">
+    <header id="headerbackground">
+        <h1>Bun Bun</h1>
+        <h1>Bake Shop</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a>About</a>
+            <a id="cart" class="current-page" href="cart.html">Cart</a>
+            <a id="cartnum" class="current-page"></a>
+        </nav>
+
+    </header>
+    <h3 id="basket_title">Your Basket</h3>
+    <table style="width:50%">
+        <tr>
+            <th class="table_item">Item</th>
+            <th class="table_quantity">Quantity</th>
+            <th class="table_price">Price</th>
+        </tr>
+        <tr>
+            <td class="table_item">The Original Cinnamon Bun</td>
+            <td class="table_quantity">6</td>
+            <td class="table_price">$5.99</td>
+        </tr>
+        <tr>
+            <td class="cart_glaze">Sugar milk glaze</td>
+
+        </tr>
+
+        <tr>
+            <td class="table_item">Pumpkin Spice Cinnamon Bun</td>
+            <td class="table_quantity">2</td>
+            <td class="table_price">$1.99</td>
+        </tr>
+
+        <tr>
+            <td class="cart_glaze">Vanilla milk glaze</td>
+        </tr>
+
+        <tr>
+            <td class="table_item">Blackberry Cinnamon Bun</td>
+            <td class="table_quantity">4</td>
+            <td class="table_price">$3.99</td>
+        </tr>
+        <tr>
+            <td class="cart_glaze">No glaze</td>
+        </tr>
+
+        <tr>
+            <td class="table_item" id="total_amount">Total</td>
+            <td> </td>
+            <td class="table_price" id="total_amount">$11.97</td>
+        </tr>
+
+    </table>
+
+    <div>
+        <button type="button" class="button">Check Out</button>
+    </div>
+
+</body>
+
+</html>
