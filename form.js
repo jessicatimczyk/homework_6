@@ -1,3 +1,4 @@
+// sets up the cascading selector form
 var subjectObject = {
     "1": {
         "Vanilla milk": ["Vanilla milk"],
@@ -31,6 +32,7 @@ window.onload = function () {
     for (var x in subjectObject) {
         amountSel.options[amountSel.options.length] = new Option(x);
     }
+    // updates title based on amount selected
     amountSel.onchange = function () {
         if (amountSel.value == 1) {
             document.getElementById("product_det_title").innerText = "One Original Cinnamon Bun"
@@ -53,7 +55,7 @@ window.onload = function () {
         }
     }
     glazeSel.onchange = function () {
-        //display correct values
+        // displays the glaze values and updates image and title based on selection
         var z = subjectObject[amountSel.value][this.value];
         var productTitle = document.getElementById("product_det_title").innerHTML;
 

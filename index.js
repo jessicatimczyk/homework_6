@@ -1,5 +1,6 @@
 var items_in_cart = 0;
 
+// shows the current number of items in cart
 function test() {
     var carnum = sessionStorage.items_in_cart
     console.log(carnum)
@@ -11,7 +12,7 @@ function test() {
     console.log("im in test")
 }
 
-
+// updates the number of items in cart when button pressed and stores in session storage
 function add_to_cart() {
     if (typeof (Storage) !== "undefined") {
         if (sessionStorage.items_in_cart) {
