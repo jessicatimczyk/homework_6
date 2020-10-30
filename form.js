@@ -25,6 +25,7 @@ var subjectObject = {
     }
 };
 window.onload = function () {
+    test()
     var amountSel = document.getElementById("amount");
     var glazeSel = document.getElementById("glaze");
     for (var x in subjectObject) {
