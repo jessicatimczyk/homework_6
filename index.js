@@ -1,7 +1,6 @@
 var items_in_cart = 0;
 
 var cart_products = sessionStorage.getItem("cart_products") || [];
-//var cart_products = new Array();
 
 console.log('cart_products = ', cart_products);
 
@@ -9,12 +8,7 @@ console.log('cart_products = ', cart_products);
 function test() {
     var carnum = sessionStorage.items_in_cart
 
-    //    var cartproducts = sessionStorage.cart_products
-
-
     document.getElementById("cartnum").innerText = items_in_cart;
-    //    document.getElementById("cart_products").innerText = cartproducts;
-
 
     if (sessionStorage.items_in_cart == undefined) {
         sessionStorage.items_in_cart = 0;
@@ -31,20 +25,7 @@ function add_to_cart() {
     if (typeof (Storage) !== "undefined") {
         if (sessionStorage.items_in_cart) {
             sessionStorage.items_in_cart = Number(sessionStorage.items_in_cart) + 1;
-            //            sessionStorage.cart_products = sessionStorage.cart_products = [product_title];
-            console.log("product title = ", product_title);
-            //            var current_products = sessionStorage.cart_products;
-            console.log("current products = ", cart_products);
 
-            //            if (current_products == "undefined") {
-            //                sessionStorage.cart_products = new Array(product_title);
-            //                console.log("after underfined cart products = ", sessionStorage.cart_products);
-            //            } else {
-            //                sessionStorage.cart_products = current_products.push(product_title);
-            //                console.log("session stoarge cart is now = ", sessionStorage.cart_products);
-            //
-            //            }
-            //            sessionStorage.cart_products = current_products.push(product_title);
 
             if (typeof cart_products == "string") {
                 cart_products = JSON.parse(cart_products);
@@ -55,10 +36,6 @@ function add_to_cart() {
             cart_products.push(product_title);
             sessionStorage.setItem('cart_products', JSON.stringify(cart_products));
             console.log("session stoarge cart is now = ", sessionStorage.cart_products);
-
-
-            //            sessionStorage.cart_products = current_products.push(product_title);
-            //            console.log("session stoarge cart is now = ", sessionStorage.cart_products);
 
         } else {
             sessionStorage.items_in_cart = 1;

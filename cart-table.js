@@ -1,28 +1,52 @@
-console.log("i made it to cart.js")
-console.log("cart products = ", sessionStorage.cart_products)
+console.log("i made it to cart.js");
+console.log("cart products = ", sessionStorage.cart_products);
 
-function createTable(tableData) {
-    console.log("i made it to create table")
-    var table = document.createElement('table');
-    var tableBody = document.createElement('tbody');
 
-    console.log(tableData);
+// Get array of classes without jQuery
+var cart_prod = JSON.parse(sessionStorage.cart_products);
 
-    tableData.forEach(function (rowData) {
-        var row = document.createElement('tr');
+//var arrayLength = array.length;
+var theTable = document.createElement('table');
 
-        //        rowData.forEach(function (cellData) {
-        //            var cell = document.createElement('td');
-        //            cell.appendChild(document.createTextNode(cellData));
-        //            row.appendChild(cell);
-        //        });
+// Note, don't forget the var keyword!
+for (var i = 0, tr, td; i < cart_prod.length; i++) {
+    tr = document.createElement('tr');
+    td = document.createElement('td');
+    td2 = document.createElement('td');
+    var butn = document.createElement("button");
+    var txt = document.createTextNode("Remove");
 
-        tableBody.appendChild(row);
-    });
+    butn.classList.add(i);
+    butn.appendChild(txt);
 
-    table.appendChild(tableBody);
-    document.body.appendChild(table);
+    //    document.appendChild(butn);
+    td.appendChild(document.createTextNode(cart_prod[i]));
+    td2.appendChild(butn);
+    tr.appendChild(td);
+    tr.appendChild(td2);
+    theTable.appendChild(tr);
+
+    butn.onclick = function () {
+        //        alert(butn.id);
+        console.log("cart_prod = ", cart_prod);
+        delete cart_prod[i];
+        console.log("cart_prod after delete = ", cart_prod);
+    };
+}
+let my_table = document.getElementById("my_table");
+my_table.appendChild(theTable);
+
+function returnBtn(clickedBtn) {
+    console.log(clickedBtn);
 }
 
-//createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
-createTable(sessionStorage.cart_products);
+
+//function printButn() {
+//    for (var i = 0; i < cart_prod.length; i++) {
+//        var butn = document.createElement("button");
+//        var txt = document.createTextNode("Remove");
+//        butn.appendChild(txt);
+//        document.appendChild(butn);
+//        butn.classList.add("remove_btn");
+//    }
+//}
