@@ -8,47 +8,50 @@ var remove_buttons = new Array();
 
 //var arrayLength = array.length;
 var theTable = document.createElement('table');
+theTable.setAttribute("id", "cart_table")
 
 // Note, don't forget the var keyword!
-for (var i = 0, tr, td; i < cart_prod.length; i++) {
-    tr = document.createElement('tr');
-    td = document.createElement('td');
-    td2 = document.createElement('td');
-    var butn = document.createElement("button");
-    var txt = document.createTextNode("Remove");
+function createCart() {
 
-    butn.classList.add('remv_butns');
-    butn.setAttribute("id", i);
-    butn.appendChild(txt);
+    for (var i = 0, tr, td; i < cart_prod.length; i++) {
+        tr = document.createElement('tr');
+        td = document.createElement('td');
+        td2 = document.createElement('td');
+        var butn = document.createElement("button");
+        var txt = document.createTextNode("Remove");
 
-    //    butn.addEventListener("click", remove_prod());
-    butn.addEventListener("click", function () {
-        remove_prod(this);
-    })
+        butn.classList.add('remv_butns');
+        butn.setAttribute("id", i);
+        butn.appendChild(txt);
 
-    //    document.appendChild(butn);
-    td.appendChild(document.createTextNode(cart_prod[i]));
-    td2.appendChild(butn);
-    tr.appendChild(td);
-    tr.appendChild(td2);
-    theTable.appendChild(tr);
+        //    butn.addEventListener("click", remove_prod());
+        butn.addEventListener("click", function () {
+            remove_prod(this);
+        })
 
-    remove_buttons.push(butn);
+        //    document.appendChild(butn);
+        td.appendChild(document.createTextNode(cart_prod[i]));
+        td2.appendChild(butn);
+        tr.appendChild(td);
+        tr.appendChild(td2);
+        theTable.appendChild(tr);
 
-    //    butn.onclick = remove_prod();
+        remove_buttons.push(butn);
 
-    //    butn.onclick = function () {
-    //        //        alert(butn.id);
-    //        console.log("cart_prod = ", cart_prod);
-    //        //        delete cart_prod[i];
-    //        cart_prod.splice(i, 1);
-    //        console.log("cart_prod after delete = ", cart_prod);
-    //    };
+        //    butn.onclick = remove_prod();
+
+        //    butn.onclick = function () {
+        //        //        alert(butn.id);
+        //        console.log("cart_prod = ", cart_prod);
+        //        //        delete cart_prod[i];
+        //        cart_prod.splice(i, 1);
+        //        console.log("cart_prod after delete = ", cart_prod);
+        //    };
+    }
+    let my_table = document.getElementById("my_table");
+    my_table.appendChild(theTable);
+
 }
-let my_table = document.getElementById("my_table");
-my_table.appendChild(theTable);
-
-
 //for (var i = 0; i < remove_buttons.length; i++) {
 //    current_butn = document.getElementById(i);
 //    current_butn.
@@ -66,6 +69,15 @@ function remove_prod(name) {
     console.log("cart_prod after splice = ", cart_prod);
     name.remove();
 
+    sessionStorage.cart_products = JSON.stringify(cart_prod);
+    console.log('session storage = ', sessionStorage.cart_products);
+    var removed_product = document.getElementById("cart_table");
+    //    removed_product.parentNode.removeChild(removed_product);
+    location.reload();
+    //    removed_product.remove();
+    //
+    //    createCart();
+
 }
 
 
@@ -80,3 +92,4 @@ function remove_prod(name) {
 //}
 
 //remove_prod();
+createCart();
