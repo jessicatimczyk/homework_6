@@ -1,2 +1,2 @@
-# homework_6b
+# homework_6a_6b
  this is my homework 6 part a and b!
