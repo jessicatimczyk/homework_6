@@ -1,15 +1,10 @@
-console.log("i made it to cart.js");
-console.log("cart products = ", sessionStorage.cart_products);
-
-
-// Get array of classes without jQuery
 var cart_prod = JSON.parse(sessionStorage.cart_products);
 
-//var arrayLength = array.length;
+//create the table element
 var theTable = document.createElement('table');
 theTable.setAttribute("id", "cart_table")
 
-// Note, don't forget the var keyword!
+// creates the table contents
 function createCart() {
 
     for (var i = 0, tr, td; i < cart_prod.length; i++) {
@@ -22,13 +17,10 @@ function createCart() {
         butn.classList.add('remv_butns');
         butn.setAttribute("id", i);
         butn.appendChild(txt);
-
-        //    butn.addEventListener("click", remove_prod());
+        // removes product when button pressed
         butn.addEventListener("click", function () {
             remove_prod(this);
         })
-
-        //    document.appendChild(butn);
         td.appendChild(document.createTextNode(cart_prod[i]));
         td2.appendChild(butn);
         tr.appendChild(td);
@@ -41,24 +33,17 @@ function createCart() {
 
 }
 
-
-
+// removes product that goes with clicked button
 function remove_prod(name) {
-    console.log("im in remove product!");
-    console.log('butn_num = ', name.id);
-    console.log("current card prods = ", cart_prod);
     cart_prod.splice(name.id, 1)
-    console.log("cart_prod after splice = ", cart_prod);
     name.remove();
-
     sessionStorage.cart_products = JSON.stringify(cart_prod);
-    console.log('session storage = ', sessionStorage.cart_products);
+    // updates the table with new array after removal
     location.reload();
-
     decreaseCartNum();
-
 }
 
+// decreases cart number by 1 when remove pressed
 function decreaseCartNum() {
     if (sessionStorage.items_in_cart) {
         sessionStorage.items_in_cart = Number(sessionStorage.items_in_cart) - 1;

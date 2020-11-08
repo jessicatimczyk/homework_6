@@ -1,8 +1,6 @@
 var items_in_cart = 0;
-
 var cart_products = sessionStorage.getItem("cart_products") || [];
 
-console.log('cart_products = ', cart_products);
 
 // shows the current number of items in cart
 function test() {
@@ -26,16 +24,13 @@ function add_to_cart() {
         if (sessionStorage.items_in_cart) {
             sessionStorage.items_in_cart = Number(sessionStorage.items_in_cart) + 1;
 
-
             if (typeof cart_products == "string") {
                 cart_products = JSON.parse(cart_products);
-                console.log("after parse = ", cart_products);
-                console.log("cart_products is now", typeof cart_products);
             };
 
+            // stores array of products in cart in storage
             cart_products.push(product_title);
             sessionStorage.setItem('cart_products', JSON.stringify(cart_products));
-            console.log("session stoarge cart is now = ", sessionStorage.cart_products);
 
         } else {
             sessionStorage.items_in_cart = 1;
@@ -47,6 +42,3 @@ function add_to_cart() {
         document.getElementById("cartnum").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-
-
-console.log("javascript functions triggered")
