@@ -163,17 +163,30 @@ table {
     border: 1px solid grey;
 }
 
+/*
 th {
     color: black;
     text-align: left;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 20px;
 
 }
+*/
 
 td {
     color: black;
-    padding-bottom: 0px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    text-align: left;
+
+}
+
+td button {
+    margin-right: 0px;
+    margin-left: 50px;
+    padding-left:
 }
 
 .cart_glaze {
@@ -242,8 +255,4 @@ td {
     border-radius: 10px;
     right: 100px;
 
-}
-
-#table {
-    color: black;
 }
