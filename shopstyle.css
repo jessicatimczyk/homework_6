@@ -133,7 +133,7 @@ h2 {
     height: 50px;
     border-radius: 10px;
     position: fixed;
-    bottom: 40px;
+    bottom: 150px;
     left: 100px;
     float: left;
 }
@@ -163,15 +163,6 @@ table {
     border: 1px solid grey;
 }
 
-/*
-th {
-    color: black;
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 20px;
-
-}
-*/
 
 td {
     color: black;
@@ -184,9 +175,17 @@ td {
 }
 
 td button {
+    background-color: white;
+    border-radius: 5px;
     margin-right: 0px;
     margin-left: 50px;
-    padding-left:
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+td button:hover {
+    background-color: black;
+    color: white;
 }
 
 .cart_glaze {
@@ -196,9 +195,10 @@ td button {
     padding-left: 10px;
 }
 
-#total_amount {
+.total_amount {
     font-size: 18px;
     padding-bottom: 10px;
+    color: black;
 }
 
 .table_item {
